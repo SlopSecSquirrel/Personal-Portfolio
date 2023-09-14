@@ -1,6 +1,16 @@
 import Image from 'next/image'
 import Navbar from './components/navbar'
 
+// // Fetch all posts (in /pages/index.tsx)
+// export async function getStaticProps() {
+//   const prisma = new PrismaClient()
+//   const posts = await prisma.post.findMany()
+
+//   return {
+//     props : { posts }
+//   }
+// }
+
 export default function Home() {
   return (
     <>
