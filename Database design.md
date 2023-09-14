@@ -1,6 +1,6 @@
-# CVE showcase model/UI designs.
+# CVE showcase model/UI designs
 
-## Candidate components and models - 
+## Candidate components and models
 
 * CVE Showcase (showcase.jsx)
 * CVE Year (cve-year.jsx / CVEYear table in the DB)
@@ -8,6 +8,7 @@
 * CVE (cve.jsx / CVE in the DB)
 
 ## Proposed structure
+
 The showcase will contain a series of "CVE Year" components which will group CVEs by the year that they were obtained. These will be expandable panels, with the current year being expanded by default and the other years collapsed
 
 Each "CVE Year" will contain a series of "CVE Product" components in a list, also as collapsible panels probably. These panels will each contain a list of CVEs for the product.
@@ -15,14 +16,16 @@ Each "CVE Year" will contain a series of "CVE Product" components in a list, als
 Each "CVE Product" will contain a list of "CVE" components detailing the CVEs which were obtained whilst researching that product/product version. These "CVE" components will be rendered as cards, either page width cards or small rounded cards in a grid. These will be ordered by severity.
 
 ## CVEYear Model
-Each "CVE Year" object in the database/UI will have the following fields - 
+
+Each "CVE Year" object in the database/UI will have the following fields
 
 * Year (obviously)
 * ID
 * A short note about what I focused on that year and why
 
 ## CVEProduct Model
-Each "CVE Product" object in the database/UI will have the following fields - 
+
+Each "CVE Product" object in the database/UI will have the following fields
 
 * The "CVEYear" ID that it corresponds with
 * The product name
@@ -30,7 +33,8 @@ Each "CVE Product" object in the database/UI will have the following fields -
 * A short description of the product
 
 ## CVE Model
-Each "CVE" object in the database/UI will have the following fields - 
+
+Each "CVE" object in the database/UI will have the following fields
 
 * CVE ID (this can be the primary key, realistically)
 * CVEProduct ID (a foreign key pointing at the associated CVEProduct)
@@ -45,7 +49,8 @@ Each "CVE" object in the database/UI will have the following fields -
 * Publication URLs (comma separated list in MySQL, array in Mongo et al.)
 
 ## Aesthetic stuff
-Each "CVE" Component card will be colored according to the severity of the vulnerability -  
+
+Each "CVE" Component card will be colored according to the severity of the vulnerability
 
 * Critical findings - Red-ish
 * High findings - Orange-ish

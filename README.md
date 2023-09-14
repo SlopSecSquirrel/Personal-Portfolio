@@ -1,18 +1,32 @@
-# What is this?
+# Ollie's portfolio site
+
+## Table of Contents
+
+- [Ollie's portfolio site](#ollies-portfolio-site)
+  - [Table of Contents](#table-of-contents)
+  - [What is this?](#what-is-this)
+  - [Why is this here?](#why-is-this-here)
+  - [What's a CVE?](#whats-a-cve)
+  - [Can I use this code?](#can-i-use-this-code)
+  - [License](#license)
+
+## What is this?
+
 A small portfolio site and CVE showcase.
 
-# Why is this here?
+## Why is this here?
+
 I want to learn React and Next.js and I think this is a neat product to make whilst learning those technologies.
 
-# What's a CVE?
+## What's a CVE?
 
 A 'Common Vulnerability and Exposure'. Essentially it's a written record of a vulnerability existing in a piece of software.
 
-# Can I use this code?
+## Can I use this code?
 
-Sure, as long as you adhere to - 
+Sure, as long as you adhere to the license.
 
-# The License 
+## License 
 
 MIT License
 
