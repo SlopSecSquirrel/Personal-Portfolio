@@ -24,12 +24,13 @@ model CVEProduct {
   notes String
   cveYear CVEYear @relation(fields: [cveYearId], references: [id])
   cveYearId Int
+  state String
   cves CVE[]
 }
 
 model CVE {
   id    Int    @id @default(autoincrement())
-  cveId  String    @unique
+  cveId  String
   cveProduct  CVEProduct @relation(fields: [cveProductId], references: [id])
   cveProductId Int
   vulnName String
