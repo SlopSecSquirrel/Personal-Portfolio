@@ -1,15 +1,19 @@
-import Image from 'next/image'
-import Navbar from './components/navbar'
+import Image from "next/image";
+import Navbar from "./components/navbar";
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
 
-// // Fetch all posts (in /pages/index.tsx)
-// export async function getStaticProps() {
-//   const prisma = new PrismaClient()
-//   const posts = await prisma.post.findMany()
+async function main() {}
 
-//   return {
-//     props : { posts }
-//   }
-// }
+main()
+  .then(async () => {
+    await prisma.$disconnect();
+  })
+  .catch(async (e) => {
+    console.error(e);
+    await prisma.$disconnect();
+    process.exit(1);
+  });
 
 export default function Home() {
   return (
@@ -17,9 +21,8 @@ export default function Home() {
       <Navbar></Navbar>
 
       <main className="flex flex-col items-center justify-between p-24">
-
         <h1 className="text-5xl font-bold text-white  py-10 ">Coming soon</h1>
       </main>
     </>
-  )
+  );
 }
