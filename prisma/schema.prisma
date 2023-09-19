@@ -11,28 +11,28 @@ datasource db {
 }
 
 model CVEYear {
-  id    Int    @id @default(autoincrement())
+  id    String    @id @default(auto()) @map("_id") @db.ObjectId
   year  Int    @unique
   notes String
   products CVEProduct[]
 }
 
 model CVEProduct {
-  id    Int    @id @default(autoincrement())
+  id    String    @id @default(auto()) @map("_id") @db.ObjectId
   productName  String
   productVersion  String 
   notes String
   cveYear CVEYear @relation(fields: [cveYearId], references: [id])
-  cveYearId Int
+  cveYearId String
   state String
   cves CVE[]
 }
 
 model CVE {
-  id    Int    @id @default(autoincrement())
+  id    String    @id @default(auto()) @map("_id") @db.ObjectId
   cveId  String
   cveProduct  CVEProduct @relation(fields: [cveProductId], references: [id])
-  cveProductId Int
+  cveProductId String
   vulnName String
   vulnDescription String
   vulnSeverity String

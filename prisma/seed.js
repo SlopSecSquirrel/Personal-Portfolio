@@ -5,6 +5,7 @@
 // for inspiration
 const { PrismaClient } = require('@prisma/client');
 const { CVEProducts, CVEYears, CVEs } = require('./data.js');
+const { Love_Ya_Like_A_Sister } = require('next/font/google/index.js');
 const prisma = new PrismaClient();
 
 const load = async () => {
@@ -18,7 +19,17 @@ const load = async () => {
         await prisma.CVEYear.deleteMany();
         console.log('Deleted records in CVE Year table');
 
-        // DO THE STUFF
+        await prisma.CVEYear.createMany({
+            data: CVEYears});
+            console.log('Created records in CVE Year table');
+
+        await prisma.CVEProduct.createMany({
+            data: CVEProducts});
+            console.log('Created records in CVE Product table');
+
+        await prisma.CVE.createMany({
+            data: CVEs});
+            console.log('Created records in CVE table');
 
     } catch (e) {
         console.error(e);
