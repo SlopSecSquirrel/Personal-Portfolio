@@ -31,6 +31,8 @@ const load = async () => {
             data: CVEs});
             console.log('Created records in CVE table');
 
+            console.log('Seeding complete');
+
     } catch (e) {
         console.error(e);
         process.exit(1);

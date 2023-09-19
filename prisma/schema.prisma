@@ -23,7 +23,7 @@ model CVEProduct {
   productVersion  String 
   notes String
   cveYear CVEYear @relation(fields: [cveYearId], references: [id])
-  cveYearId String
+  cveYearId String  @db.ObjectId
   state String
   cves CVE[]
 }
@@ -32,7 +32,7 @@ model CVE {
   id    String    @id @default(auto()) @map("_id") @db.ObjectId
   cveId  String
   cveProduct  CVEProduct @relation(fields: [cveProductId], references: [id])
-  cveProductId String
+  cveProductId String @db.ObjectId
   vulnName String
   vulnDescription String
   vulnSeverity String
