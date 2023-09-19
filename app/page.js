@@ -2,16 +2,18 @@ import Image from "next/image";
 import Navbar from "./components/navbar";
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
-
-let yearNow;
-
-async function main() {
-  yearNow = await prisma.CVEYear.findFirst();
-}
+import Year from "./components/year";
 
 export default async function Home() {
-  yearNow = await prisma.CVEYear.findFirst();
-
+  let years = await prisma.CVEYear.findMany({
+    include: {
+      products: {
+        include: {
+          cves: true,
+        },
+      },
+    },
+  });
 
   return (
     <>
@@ -19,8 +21,14 @@ export default async function Home() {
 
       <main className="flex flex-col items-center justify-between p-24">
         <h1 className="text-5xl font-bold text-white  py-10 ">Coming soon</h1>
-        <h2>Year: {yearNow.year}</h2>
       </main>
+      <section className="flex flex-col items-center justify-between p-24">
+        {years.map((year) => (
+          <div key={year.id}>
+            <Year year={year} />
+          </div>
+        ))}
+      </section>
     </>
   );
 }
