@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model CVEYear {
+  id    String    @id @default(auto()) @map("_id") @db.ObjectId
+  year  Int    @unique
+  notes String
+  products CVEProduct[]
+}
+
+model CVEProduct {
+  id    String    @id @default(auto()) @map("_id") @db.ObjectId
+  productName  String
+  productVersion  String 
+  notes String
+  cveYear CVEYear @relation(fields: [cveYearId], references: [id])
+  cveYearId String  @db.ObjectId
+  state String
+  cves CVE[]
+}
+
+model CVE {
+  id    String    @id @default(auto()) @map("_id") @db.ObjectId
+  cveId  String
+  cveProduct  CVEProduct @relation(fields: [cveProductId], references: [id])
+  cveProductId String @db.ObjectId
+  vulnName String
+  vulnDescription String
+  vulnSeverity String
+  vulnNotes String
+  vulnState String
+  pubURLs String
+}
