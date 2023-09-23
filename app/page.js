@@ -27,9 +27,9 @@ export default async function Home() {
       </section>
       <section className="flex flex-col items-center">   
         {years.map((year) => (
-          <section className="w-4/5 justify-center mx-auto" key={year.id}>
+          <div className="w-4/5 justify-center mx-auto" key={year.id}>
             <Year year={year} />
-          </section>
+          </div>
         ))}
       </section>
     </>

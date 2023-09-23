@@ -7,6 +7,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+// https://tailwindui.com/components/application-ui/elements/dropdowns this is the source of the dropdown menu
+
 export default function Dropdown({ years }) {
 return (
     <Menu as="div" className="relative inline-block text-left">
@@ -22,9 +24,9 @@ return (
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="m1 1 4 4 4-4"
             />
           </svg>
