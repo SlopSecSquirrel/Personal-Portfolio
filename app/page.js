@@ -20,13 +20,12 @@ export default async function Home() {
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar years={years}></Navbar>
 
       <section className="flex flex-col items-center justify-between p-24">
         <h1 className="text-5xl font-bold text-white  py-10 ">Coming soon</h1>
       </section>
-      <section className="flex flex-col items-center">
-
+      <section className="flex flex-col items-center">   
         {years.map((year) => (
           <section className="w-4/5 justify-center mx-auto" key={year.id}>
             <Year year={year} />

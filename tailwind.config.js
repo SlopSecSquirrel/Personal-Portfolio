@@ -5,8 +5,8 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/flowbite/**/*.js",
     "./public/**/*.html",
+    "./node_modules/flowbite-react/**/*.js",
   ],
   theme: {
     extend: {
@@ -18,7 +18,36 @@ module.exports = {
     },
   },
   plugins: [
-    require('flowbite/plugin')
+    require("flowbite/plugin")
   ],
   darkMode: 'class',
 };
+
+// /**
+//  * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
+//  */
+// module.exports = {
+//   content: [
+//     "./pages/**/*.{ts,tsx}",
+//     "./public/**/*.html",
+//   ],
+//   plugins: [
+//     require("flowbite/plugin")
+//   ],
+//   theme: {},
+// };
+
+// /**
+//  * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
+//  */
+// module.exports = {
+//   content: [
+//     "./node_modules/flowbite-react/**/*.js",
+//     "./pages/**/*.{ts,tsx}",
+//     "./public/**/*.html",
+//   ],
+//   plugins: [
+//     require("flowbite/plugin")
+//   ],
+//   theme: {},
+// };
