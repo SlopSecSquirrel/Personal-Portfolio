@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Product from "../components/product";
+import Musing from "./musing";
 
 export default function Year({ year }) {
   let products = year.products;
@@ -11,11 +12,18 @@ export default function Year({ year }) {
 
   return (
     <>
-      <h1 className="my-10 inline-block text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">
-        Year {year.year}
+      <h1 className="mt-5 inline-block text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">
+        Products researched in {year.year}
       </h1>
+      <br/>
 
-      <div className="grid grid-cols-1 grid-rows-1 gap-10 md:grid-cols-2 2xl:grid-cols-3 items-stretch">
+      {/* <div className="px-6 py-3 bg-slate-800 block border border-gray-600 rounded-md shadow my-5">
+        <p className="italic text-1xl sm:text-1xl text-slate-900 tracking-tight dark:text-slate-300" dangerouslySetInnerHTML={{__html: year.notes}}></p>
+      </div> */}
+
+      <Musing thought={year.notes} startsOpen={Number(year.year) == new Date().getFullYear()}></Musing>
+
+      <div className="grid grid-cols-1 grid-rows-1 gap-10 md:grid-cols-2 2xl:grid-cols-2 items-stretch">
         {products.map((product) => (
           <div key={product._id}>
             <Product product={product} />

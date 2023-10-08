@@ -8,13 +8,13 @@ const CVEYears = [
     {
         id: "6508e74f51b57d77c8db358d",
         year: 2022,
-        notes: 'This was the year that I got my first ever CVE, a high severity path traversal flaw in KubeVirt. This year marks the beginning of my growing <b>obsession</b> with independent security research.',
+        notes: 'This was the year that I got my <b>first</b> ever CVE, a high severity path traversal flaw in KubeVirt.<br/><br/>This year actually marked an important milestone in my professional growth. Prior to 2022, CVEs felt like this absurd hurdle that could only be obtained by the most elite of security researchers. It felt almost arrogant to even try to go after them for some reason.. That mental block was broken and I rapidly became obsessed with independent security research.',
         products: ["6508e7c330030e1a044c573a"]
     },
     {
         id: "6508e74f51b57d77c8db358e",
         year: 2023,
-        notes: 'Vulnerability research in 2023 has been laser focused solely on <b>Remote Monitoring and Management (RMM)</b> tools. RMM tools fascinate me, as when they are compromised an attacker\'s scope grows exponentially from one compromised server to the potential compromise of every \'agent\' which is managed by the RMM server. I set myself a stretch goal this year to register 1 CVE per month, and I\'m proud to say that that goal has been thoroughly obliterated. I have a few interesting (IMO) observations from my research this year, and I\'m planning on delivering a conference talk in 2024 which discusses the state of this product domain.',
+        notes: 'Vulnerability research in 2023 was laser focused solely on <b>Remote Monitoring and Management (RMM)</b> tools. As a security researcher, RMM tools fascinate me; when they are compromised an attacker\'s scope grows exponentially from one compromised server to the potential compromise of every \'agent\' which is managed by the RMM server.<br/><br/>I set myself a stretch goal in 2023 to register 1 CVE per month, and I\'m proud to say that that goal was thoroughly obliterated, with 40+ CVEs being registered over the year.<br/><br/>I have a few interesting (in my biased opinion) observations from my research this year, and I\'m planning on delivering a conference talk in 2024 which discusses the state of this product domain.',
         products: ["6508e7c330030e1a044c573b","6508e7c330030e1a044c573c", "6508e7c330030e1a044c573d"]
     }
 
@@ -28,14 +28,16 @@ const CVEProducts = [
         notes: "Through code review of the KubeVirt source code, I identified a potential path traversal flaw. Researchers at Google were able to weaponise my finding into a full high severity path traversal vulnerability, then led the charge with responsibly disclosing my finding to the KubeVirt team.",
         state: "public",
         cves: ["6508e7c330030e1a044c5340"],
+        privateNotes: ""
     },
     {
         id: "6508e7c330030e1a044c573b",
         productName: "Faronics Insight",
         productVersion: "v11.21.2100.262",
-        notes: "Faronics Insight is a feature rich software platform which is deployed on premises in schools. The application enables teachers to administer, control and interact with student devices. The application contains numerous features, including allowing teachers to transfer files to/from students and remotely viewing the contents of student screens. I had an amazing time researching this product, and it was an excellent experience working with the Faronics team to coordinate disclosure.",
+        notes: "Faronics Insight is a feature rich software platform which is deployed on premises in schools. The application enables teachers to administer, control and interact with student devices. The application contains numerous features, including allowing teachers to transfer files to/from students and remotely viewing the contents of student screens.<br/><br/> I had an amazing time researching this product, and it was an excellent experience working with the Faronics team to coordinate disclosure.",
         state: "public",
         cves: ["6508e7c330030e1a044c5350","6508e7c330030e1a044c5351","6508e7c330030e1a044c5352","6508e7c330030e1a044c5353","6508e7c330030e1a044c5354","6508e7c330030e1a044c5355","6508e7c330030e1a044c5356","6508e7c330030e1a044c5357","6508e7c330030e1a044c5358","6508e7c330030e1a044c5359","6508e7c330030e1a044c535a"],
+        privateNotes: ""
     },
     {
         id: "6508e7c330030e1a044c573c",
@@ -44,14 +46,16 @@ const CVEProducts = [
         notes: "?????? 🤫 is a large, mature, high-quality RMM tool which allows administrators to register agents which can be monitored and controlled remotely through a central server. I am incredibly impressed and humbled by my experience reporting vulnerabilities to the ?????? 🤫 team, they were responsive/proactive/professional throughout the disclosure process and I have a lot of respect for them as an organization.",
         state: "private",
         cves: [],
+        privateNotes: "Coming soon - the projected public disclosure date is 10/31/2023 (🎃)"
     },
     {
         id: "6508e7c330030e1a044c573d",
         productName: "?????? 🤫",
         productVersion: "?????? 🤫",
-        notes: "Coming soon.",
+        notes: "?????? 🤫 is a popular, market leading RMM tool which has become something of a household name amongst Systems Adminstrators over the last couple of decades. Their security posture is excellent at this point, their communication was professional and warm and their proactive approach to bugfixing is genuinely inspiring. I had an excellent time finding and reporting vulnerabilities in this product alongside a talented NCC Group colleague.",
         state: "private",
         cves: [],
+        privateNotes: "Coming soon - the projected public disclosure date is 11/30/2023, although this may change."
     },
 ];
 

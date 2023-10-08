@@ -12,7 +12,8 @@ const CVEProductSchema = new mongoose.Schema(
     notes: String,
     // cveYearId: { type: mongoose.Schema.Types.ObjectId, ref: CVEYear },
     state: String,
-    cves: [{ type: mongoose.Schema.Types.ObjectId, ref: mongoose.models.CVE }]
+    cves: [{ type: mongoose.Schema.Types.ObjectId, ref: mongoose.models.CVE }],
+    privateNotes: String
   },
   {
     timestamps: true,

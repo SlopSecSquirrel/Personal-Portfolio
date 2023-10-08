@@ -1,45 +1,36 @@
 import Navbar from "./components/navbar";
 import Year from "./components/year";
-import dbConnect from "@/lib/dbConnect"
-import CVEYear from "@/models/CVEYear"
-import CVEProduct from "@/models/CVEProduct"; // this needs to stay, otherwise the populate calls fail below.
-import CVE  from "@/models/CVE"; // this needs to stay, otherwise the populate calls fail below.
+import Image from "next/image";
 
+import { getAllCVEYearsAsJSON } from "@/lib/dbUtils";
 
 export default async function Home() {
-  await dbConnect();
-  const years = await CVEYear.find().populate({
-    path: 'products',
-    model: "CVEProduct",
-    populate: {
-        path: 'cves',
-        model: "CVE",
-    }
-  })
-
-  // Reverse the years, so the most recent ones come first.
-  years.reverse();
-
-
-  // This is unfortunate, but I can't see a way around it. Basically because Mongoose returns an object with a prototype full of fun methods etc. 
-  // For whatever reason, NextJS/React is getting sad that the object isn't a plain ol' serialized JSON object and it's throwing endless maximum call stack errors, 
-  // We mitigate this flaw by making a basic "POJO" clone of the object to pass to the Navbar here.
-  let yearsCloned = JSON.parse(JSON.stringify(years));
-
-
+  let years = await getAllCVEYearsAsJSON(true);
 
   return (
     <>
-      <Navbar years={yearsCloned}></Navbar>
+      <Navbar years={years}></Navbar>
 
-      <section className="mt-10 flex flex-col items-center">   
+      <section className="mb-5 flex flex-col items-center">
         {years.map((year) => (
-          <div className="w-4/5 justify-center mx-auto" key={year._id}>
+          <div className="mt-0 w-4/5 justify-center mx-auto" key={year._id}>
             <Year year={year} />
+            {/* <hr className="h-px mt-8 bg-gray-200 border-0 dark:bg-gray-700" /> */}
+            
+            <div className="inline-flex items-center justify-center w-full">
+              <hr className="w-2/3 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700" />
+              <div className="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
+                <Image
+                  src={"./bug.svg"}
+                  width={20}
+                  height={20}
+                  alt="Logo"
+                ></Image>
+              </div>
+            </div>
           </div>
         ))}
       </section>
     </>
   );
-
 }

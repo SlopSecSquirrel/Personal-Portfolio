@@ -44,12 +44,12 @@ export default function Product({ product }) {
             {product.productVersion}
           </span>
         </a>
-        <p className="my-3 font-normal text-gray-700">{product.notes}</p>
+        <p className="my-3 font-normal text-gray-700" dangerouslySetInnerHTML={{__html: product.notes}}></p>
         <a
-          href="#"
+          href={"/vulns/"+product._id}
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-orange-400 rounded-lg hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300"
         >
-          Read more
+          Vulns
           <svg
             className="w-3.5 h-3.5 ml-2"
             aria-hidden="true"
@@ -75,9 +75,9 @@ export default function Product({ product }) {
           <h5 className="text-2xl font-bold tracking-tight text-gray-900">
             Responsible disclosure in progress
           </h5>
-          <span className="text-sm text-gray-900 dark:text-gray-900">-</span>
+          <span className="text-sm text-gray-900 dark:text-gray-900 italic">version: private</span>
         </a>
-        <p className="my-3 font-normal text-gray-700">Coming soon.</p>
+        <p className="my-3 font-normal text-gray-700" dangerouslySetInnerHTML={{__html: product.privateNotes}}></p>
       </div>
     );
   }

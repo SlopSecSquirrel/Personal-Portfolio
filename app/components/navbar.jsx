@@ -6,12 +6,6 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Dropdown from "./dropdown";
 
-const navigation = [
-  { name: "CVE Showcase", href: "#", current: true },
-  { name: "Publications", href: "#", current: false },
-  { name: "About Me", href: "#", current: false },
-];
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -19,8 +13,8 @@ function classNames(...classes) {
 export default function Navbar({ years }) {
   return (
     <navbar className="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 align-text-bottom">
+        <a href="/" className="flex items-center mb-0 md:mb-5">
           <Image 
           src={"./bug.svg"} 
           width={40} 
@@ -28,8 +22,11 @@ export default function Navbar({ years }) {
           alt="Logo"
           ></Image>
           <span className="self-center text-4xl font-semibold whitespace-nowrap dark:text-white px-2">
-            Oliver Brooks
+            Oliver Brooks 
+            <span className="px-3 dark:text-slate-600 hidden self-center text-2xl whitespace-nowrap lg:inline-flex md:inline-flex">// doing security stuff</span>
+
           </span>
+          
         </a>
         <button
           data-collapse-toggle="navbar-solid-bg"
@@ -72,7 +69,7 @@ export default function Navbar({ years }) {
               <Menu as="div" className="relative inline-block text-left">
                 <div>
                   <Menu.Button className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-orange-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-                    CVE Showcase{" "}
+                    Narcissism{" "}
                     <svg
                       className="w-2.5 h-2.5 ml-2.5"
                       aria-hidden="true"
@@ -102,10 +99,10 @@ export default function Navbar({ years }) {
                 >
                   <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1">
-                      <Menu.Item>
+                    <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/narcissism"
                             className={classNames(
                               active
                                 ? "bg-gray-100 text-gray-900"
@@ -113,7 +110,22 @@ export default function Navbar({ years }) {
                               "block px-4 py-2 text-sm"
                             )}
                           >
-                            Resume
+                            About me
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/contact"
+                            className={classNames(
+                              active
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                            Contact Me
                           </a>
                         )}
                       </Menu.Item>
@@ -128,7 +140,7 @@ export default function Navbar({ years }) {
                               "block px-4 py-2 text-sm"
                             )}
                           >
-                            Contact Me
+                            Resume
                           </a>
                         )}
                       </Menu.Item>
