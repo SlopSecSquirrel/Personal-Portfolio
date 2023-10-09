@@ -125,7 +125,7 @@ export default function Navbar({ years }) {
                               "block px-4 py-2 text-sm"
                             )}
                           >
-                            Contact Me
+                            Contact me
                           </a>
                         )}
                       </Menu.Item>
