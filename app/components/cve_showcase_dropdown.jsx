@@ -10,7 +10,7 @@ function classNames(...classes) {
 
 // https://tailwindui.com/components/application-ui/elements/dropdowns this is the source of the dropdown menu
 
-export default function Dropdown({ years }) {
+export default function CVEShowcaseDropdown({ years }) {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
@@ -65,7 +65,7 @@ export default function Dropdown({ years }) {
               <Menu.Item key={year._id}>
                 {({ active }) => (
                   <a
-                    href={"/" + year.year}
+                    href={"/year/" + year.year}
                     className={classNames(
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                       "block px-4 py-2 text-sm"

@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <>
-      <Navbar years={years}></Navbar>
+      <Navbar></Navbar>
 
       <section className="mb-5 flex flex-col items-center">
         {years.map((year) => (
@@ -21,7 +21,7 @@ export default async function Home() {
               <hr className="w-2/3 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700" />
               <div className="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
                 <Image
-                  src={"./bug.svg"}
+                  src={"/bug.svg"}
                   width={20}
                   height={20}
                   alt="Logo"

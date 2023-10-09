@@ -1,12 +1,10 @@
 import Image from 'next/image'
 import Navbar from '../components/navbar'
-import { getAllCVEYearsAsJSON } from '@/lib/dbUtils'
 
 export default async function ContactForm() {
-  const years = await getAllCVEYearsAsJSON(false);
   return (
     <>
-      <Navbar years={years}></Navbar>
+      <Navbar></Navbar>
 
       <main className="flex flex-col items-center justify-between p-24">
 

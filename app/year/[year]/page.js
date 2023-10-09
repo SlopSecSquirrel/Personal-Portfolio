@@ -1,7 +1,7 @@
 import { getAllCVEsForProductID } from "@/lib/dbUtils";
 import Link from "next/link";
-import Year from "../components/year";
-import Navbar from "../components/navbar";
+import Year from "../../components/year";
+import Navbar from "../../components/navbar";
 import Image from "next/image";
 import { getAllCVEYearsAsJSON } from "@/lib/dbUtils";
 
@@ -20,7 +20,7 @@ export default async function Page({ params }) {
   if (currentYear == null || currentYear == undefined) {
     return (
       <>
-        <Navbar years={years}></Navbar>
+        <Navbar></Navbar>
 
         <section className="mb-5 flex flex-col items-center">
           <div className="mt-0 w-4/5 justify-center mx-auto">
@@ -34,7 +34,7 @@ export default async function Page({ params }) {
               <hr className="w-2/3 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700" />
               <div className="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
                 <Image
-                  src={"./bug.svg"}
+                  src={"/bug.svg"}
                   width={20}
                   height={20}
                   alt="Logo"
@@ -49,7 +49,7 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <Navbar years={years}></Navbar>
+      <Navbar></Navbar>
 
       <section className="mb-5 flex flex-col items-center">
         <div
@@ -63,7 +63,7 @@ export default async function Page({ params }) {
             <hr className="w-2/3 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700" />
             <div className="absolute px-4 -translate-x-1/2 bg-white left-1/2 dark:bg-gray-900">
               <Image
-                src={"./bug.svg"}
+                src={"/bug.svg"}
                 width={20}
                 height={20}
                 alt="Logo"
