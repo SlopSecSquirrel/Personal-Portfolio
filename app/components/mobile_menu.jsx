@@ -35,7 +35,7 @@ export default function MobilePopoverMenu({ years }) {
           leaveFrom="opacity-100 translate-y-0"
           leaveTo="opacity-0 translate-y-1"
         >
-          <Popover.Panel className="absolute divide-gray-300  bg-white my-5 justify-between py-3 text-left  border  border-gray-600 rounded-md  left-1/3 z-10 mt-3 w-screen max-w-sm -translate-x-1/3 transform sm:px-0 lg:max-w-3xl">
+          <Popover.Panel className="absolute divide-gray-300  bg-white/50 backdrop-blur my-5 justify-between py-3 text-left  border  border-gray-600 rounded-md  left-1/3 z-10 mt-3 w-screen max-w-sm -translate-x-1/3 transform sm:px-0 lg:max-w-3xl">
             <div className="grid grid-cols-1 font-normal">
               <div className="">
                 <a href="/" className="pl-5 flex items-center mb-0 md:mb-5 py-2 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-grey-900 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
