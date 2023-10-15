@@ -5,7 +5,7 @@ const uuid = require("uuid")
 const CVESchema = new mongoose.Schema(
   {
     _id: { type: String, default: uuid.v1 },
-    cveId: String,
+    cveId: { type:String,unique:true },
     // cveProductId: { type: mongoose.Schema.Types.ObjectId, ref: CVEProduct },
     vulnName: String,
     vulnDescription: String,

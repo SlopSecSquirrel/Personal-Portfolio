@@ -1,8 +1,8 @@
 "use client" 
 
 import React, {useState} from "react";
-export default function Musing({thought}) {
-    const [open, setOpen] = useState(false);
+export default function Musing({thought, defaultOpen=false}) {
+    const [open, setOpen] = useState(defaultOpen);
     
     if(open){
   return (

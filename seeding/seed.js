@@ -11,7 +11,9 @@ const mongoose = require("mongoose");
 const CVE = require("../models/CVE");
 const CVEYear = require("../models/CVEYear");
 const CVEProduct = require("../models/CVEProduct");
-const { CVEProducts, CVEYears, CVEs } = require("./data.js");
+const { CVEProducts } = require("./product_seeds");
+const { CVEs } = require("./cve_seeds");
+const { CVEYears } = require("./year_seeds");
 
 async function cleanup() {
   await CVE.deleteMany();

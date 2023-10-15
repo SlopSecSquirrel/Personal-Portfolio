@@ -16,7 +16,7 @@ export default function Product({ product }) {
         <p className="my-3 font-normal text-gray-700" dangerouslySetInnerHTML={{__html: product.notes}}></p>
         <a
           href={"/vulns/"+product._id}
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-orange-400 rounded-lg hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-300"
         >
           Vulns
           <svg

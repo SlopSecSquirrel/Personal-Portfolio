@@ -56,7 +56,7 @@ export default async function Page({ params }) {
           className="mt-0 w-4/5 justify-center mx-auto"
           key={currentYear._id}
         >
-          <Year year={currentYear} />
+          <Year year={currentYear} openMusing="true" />
           {/* <hr className="h-px mt-8 bg-gray-200 border-0 dark:bg-gray-700" /> */}
 
           <div className="inline-flex items-center justify-center w-full">

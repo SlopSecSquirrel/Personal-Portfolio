@@ -3,7 +3,7 @@ import Link from "next/link";
 import Product from "../components/product";
 import Musing from "./musing";
 
-export default function Year({ year }) {
+export default function Year({ year, openMusing=false  }) {
   let products = year.products;
   products.reverse(); // put the most recent product first
 
@@ -12,7 +12,7 @@ export default function Year({ year }) {
 
   return (
     <>
-      <h1 className="mt-5 inline-block text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">
+      <h1 className="mt-5 inline-block text-2xl sm:text-3xl font-semibold text-slate-900 tracking-tight dark:text-slate-200">
       Products researched {Number(year.year) == new Date().getFullYear() ? "this year" : "in "+year.year} 
       </h1>
       <br/>
@@ -21,7 +21,7 @@ export default function Year({ year }) {
         <p className="italic text-1xl sm:text-1xl text-slate-900 tracking-tight dark:text-slate-300" dangerouslySetInnerHTML={{__html: year.notes}}></p>
       </div> */}
 
-      <Musing thought={year.notes}></Musing>
+      <Musing thought={year.notes} defaultOpen={openMusing}></Musing>
 
       <div className="grid grid-cols-1 grid-rows-1 gap-10 md:grid-cols-2 2xl:grid-cols-2 items-stretch">
         {products.map((product) => (
