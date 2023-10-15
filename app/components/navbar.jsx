@@ -19,7 +19,7 @@ export default async function Navbar() {
           ></Image>
           <span className="self-center text-4xl font-semibold whitespace-nowrap dark:text-white px-2">
             Oliver Brooks 
-            <span className="px-3 dark:text-slate-600 hidden self-center text-2xl whitespace-nowrap lg:inline-flex md:inline-flex">// doing the security things</span>
+            <span className="px-3 dark:text-slate-600 hidden self-center text-2xl whitespace-nowrap lg:inline-flex md:inline-flex">&#47;&#47; doing the security things</span>
 
           </span>
           
