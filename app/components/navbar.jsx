@@ -7,6 +7,8 @@ import MobilePopoverMenu from "./mobile_menu";
 
 export default async function Navbar() {
   let years = await getAllCVEYearsAsJSON(false);
+  // Forcibly sort the years from new to old, just in case.
+  years.sort(function(a,b) {return (a.year > b.year) ? -1 : ((b.year > a.year) ? 1 : 0);} );
 
   return (
     <navbar className="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">

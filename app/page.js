@@ -7,6 +7,8 @@ import CVESummary from "./components/cve_summary";
 
 export default async function Home() {
   let years = await getAllCVEYearsAsJSON(true);
+  // Forcibly sort the years from new to old, just in case.
+  years.sort(function(a,b) {return (a.year > b.year) ? -1 : ((b.year > a.year) ? 1 : 0);} );
 
   return (
     <>
