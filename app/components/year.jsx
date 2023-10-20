@@ -3,7 +3,7 @@ import Link from "next/link";
 import Product from "../components/product";
 import Musing from "./musing";
 
-export default function Year({ year, openMusing=false  }) {
+export default function Year({ year, openMusing=true  }) {
   let products = year.products;
   products.reverse(); // put the most recent product first
 

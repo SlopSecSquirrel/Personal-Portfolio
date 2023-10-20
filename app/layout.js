@@ -2,6 +2,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 import "flowbite";
+import UnderConstruction from "./components/under_construction";
+import Navbar from "./components/navbar";
 
 export const metadata = {
   title: "Oliver Brooks' Portfolio 🍁",
@@ -15,6 +17,9 @@ export default function RootLayout({ children }) {
       <body
         className={inter.className + "bg-white dark:bg-gray-900"}
       >
+        <UnderConstruction></UnderConstruction>
+        <Navbar></Navbar>
+        
           <main>{children}</main>
       </body>
     </html>

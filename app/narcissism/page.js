@@ -7,7 +7,6 @@ export default async function AboutMe() {
 
   return (
     <>
-      <Navbar></Navbar>
 
       <main className="flex flex-col items-center justify-between p-24">
 

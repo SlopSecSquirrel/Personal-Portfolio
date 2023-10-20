@@ -18,41 +18,65 @@ export default async function CVESummary() {
   return (
     <>
       {/* Mobile view */}
-      <div className="flex  md:hidden lg:hidden justify-between items-center m-1 font-medium py-1 px-2 w-screen rounded-lg text-white bg-slate-700">
-        <div className="flex text-xs py-1 px-2 font-medium leading-none max-w-full flex-initial">
-          Current CVE count: {cves.length}
-        </div>
-        <div className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
+      <div className="flex  md:hidden justify-between items-center m-1 font-medium py-1 px-2 w-screen rounded-lg text-white bg-slate-700">
+        <span className="flex text-xs py-1 px-2 font-medium leading-none max-w-full flex-initial">
+          CVEs: {cves.length}
+        </span>
+        <span className="flex text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
+          /
+        </span>
+        <span className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
           Criticals: {criticalCount}
-        </div>
-        <div className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
+        </span>
+        <span className="flex text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
+          /
+        </span>
+        <span className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
           Highs: {highCount}
-        </div>
-        <div className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
+        </span>
+        <span className="flex text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
+          /
+        </span>
+        <span className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
           Mediums: {mediumCount}
-        </div>
-        <div className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
+        </span>
+        <span className="flex text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
+          /
+        </span>
+        <span className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
           Lows: {lowCount}
-        </div>
+        </span>
       </div>
 
       {/* Desktop view */}
-      <div className="hidden lg:flex md:flex justify-between items-center m-1 font-medium py-1 px-2 w-screen rounded-lg text-white bg-slate-700">
-        <div className="flex text-xs py-1 px-2 font-medium leading-none max-w-full flex-initial">
-          CVE count: {cves.length}
-        </div>
-        <div className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
-          Critical severity CVEs: {criticalCount}
-        </div>
-        <div className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
-          High severity CVEs: {highCount}
-        </div>
-        <div className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
-          Medium severity CVEs: {mediumCount}
-        </div>
-        <div className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
-          Low severity CVEs: {lowCount}
-        </div>
+      <div className="hidden md:flex justify-between items-center m-1 font-medium py-1 px-2 w-screen rounded-lg text-white bg-slate-700">
+        <span className="flex text-xs py-1 px-2 font-medium leading-none max-w-full flex-initial">
+          Total CVEs: {cves.length}
+        </span>
+        <span className="flex text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
+          /
+        </span>
+        <span className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
+          Critical Severity CVEs: {criticalCount}
+        </span>
+        <span className="flex text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
+          /
+        </span>
+        <span className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
+          High Severity CVEs: {highCount}
+        </span>
+        <span className="flex text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
+          /
+        </span>
+        <span className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
+          Medium Severity CVEs: {mediumCount}
+        </span>
+        <span className="flex text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
+          /
+        </span>
+        <span className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
+          Low Severity CVEs: {lowCount}
+        </span>
       </div>
     </>
   );

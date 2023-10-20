@@ -1,4 +1,3 @@
-import { getAllCVEsForProductID } from "@/lib/dbUtils";
 import Link from "next/link";
 import Year from "../../components/year";
 import Navbar from "../../components/navbar";
@@ -20,11 +19,10 @@ export default async function Page({ params }) {
   if (currentYear == null || currentYear == undefined) {
     return (
       <>
-        <Navbar></Navbar>
 
-        <section className="mb-5 flex flex-col items-center">
+        <section className="flex min-h-screen flex-col items-center justify-items-center justify-center mt-1">
           <div className="mt-0 w-4/5 justify-center mx-auto">
-            <h1 className="mt-5  text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200 inline-flex items-center justify-center w-full">
+            <h1 className="mt-0  text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200 inline-flex items-center justify-center w-full">
               No research was conducted in the year {params.year}
             </h1>
             <h1 className="mt-5  text-lg sm:text-3xl font-bold text-slate-900 tracking-tight dark:text-slate-500 inline-flex items-center justify-center w-full">
@@ -49,7 +47,6 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <Navbar></Navbar>
 
       <section className="mb-5 flex flex-col items-center">
         <div

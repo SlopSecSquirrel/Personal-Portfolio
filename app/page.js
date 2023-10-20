@@ -12,9 +12,8 @@ export default async function Home() {
 
   return (
     <>
-      <Navbar></Navbar>
 
-      <section className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 align-text-bottom">
+      <section className="w-4/5 flex flex-wrap items-center justify-between mx-auto  align-text-bottom">
         <CVESummary></CVESummary>
       </section>
 

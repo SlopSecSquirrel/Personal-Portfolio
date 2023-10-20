@@ -7,7 +7,7 @@ import React, { Fragment } from "react";
 export default function MobilePopoverMenu({ years }) {
   return (
     <div className="max-w-sm lg:hidden md:hidden ">
-      <Popover className="fixed top-0 right-0 mt-5 mr-5">
+      <Popover className="relative top-0 right-0 mr-5">
         <Popover.Button className="group inline-flex items-center rounded-md px-3 py-2 text-base font-medium text-white hover:text-opacity-100 hover:bg-blue-500">
           <span className="sr-only">Open main menu</span>
           <svg
@@ -73,7 +73,7 @@ export default function MobilePopoverMenu({ years }) {
                   height={32}
                   alt="GitHub icon"
                 ></Image>
-                <span className="pl-2">Open Source</span>
+                <span className="pl-2">My Github</span>
               </a>
                 {/* <a href="https://github.com/SlopSecSquirrel/Personal-Portfolio" className=' hover:text-orange-700' target='_blank'>Github</a> */}
               </div>

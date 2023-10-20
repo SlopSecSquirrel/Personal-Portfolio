@@ -4,7 +4,6 @@ import Navbar from '../components/navbar'
 export default async function ContactForm() {
   return (
     <>
-      <Navbar></Navbar>
 
       <main className="flex flex-col items-center justify-between p-24">
 
