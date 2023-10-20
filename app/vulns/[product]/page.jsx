@@ -4,6 +4,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import Navbar from "@/app/components/navbar";
 import Image from "next/image";
+import CVEChip from "@/app/components/cve_chip";
 export default async function Page({ params }) {
   let product = await getProductByProductID(params.product, true);
 
@@ -42,7 +43,6 @@ export default async function Page({ params }) {
   const highs = product.cves.filter((cve) => cve.vulnSeverity == "High");
   const mediums = product.cves.filter((cve) => cve.vulnSeverity == "Medium");
   const lows = product.cves.filter((cve) => cve.vulnSeverity == "Low");
-
   return (
     <>
       <section className="mb-5 flex flex-col items-center">
@@ -50,11 +50,19 @@ export default async function Page({ params }) {
           <h1 className="mt-5 inline-block text-2xl sm:text-3xl font-semibold text-slate-900 tracking-tight dark:text-slate-200">
             Vulnerabilities identified in {product.productName}
           </h1>
-          <h1>{product._id}</h1>
-          <h1>Critical count: {criticals.length}</h1>
-          <h1>High count: {highs.length}</h1>
-          <h1>Medium count: {mediums.length}</h1>
-          <h1>Low count: {lows.length}</h1>
+          {/* debug stuff 👇 */}
+          {/* <h1 className="text-white">{product._id}</h1>
+          <h1 className="text-white">Critical count: {criticals.length}</h1>
+          <h1 className="text-white">High count: {highs.length}</h1>
+          <h1 className="text-white">Medium count: {mediums.length}</h1>
+          <h1 className="text-white">Low count: {lows.length}</h1> */}
+
+          {/* <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-5"> */}
+          <div className="flex flex-wrap mt-5">
+            {product.cves.map((cve) => (
+                <CVEChip key={cve.cveID} cve={cve}></CVEChip>
+              ))}
+          </div>
 
           <div className="inline-flex items-center justify-center w-full">
             <hr className="w-2/3 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700" />

@@ -3,6 +3,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { useEffect } from "react";
+import ImageHover from "./image_hover";
+
 export default function UnderConstruction() {
   const [open, setOpen] = useState(true);
 
@@ -30,16 +32,18 @@ export default function UnderConstruction() {
             </span>
           </div>
           <div className="ml-auto mr-2">
-            <button className="mt-1 underline text-red-900">
-              <Image
-                onClick={() => {
-                  saveToLocalStorage();
-                }}
-                alt="Close banner button"
-                src={"/close.svg"}
-                width={"20"}
-                height={"20"}
-              ></Image>
+            <button
+              onClick={() => {
+                saveToLocalStorage();
+              }}
+              className="mt-1 underline text-red-900"
+            >
+              <ImageHover
+                height={20}
+                width={20}
+                imageOne={"/close.svg"}
+                imageTwo={"/close_hover.svg"}
+              ></ImageHover>
             </button>
           </div>
         </div>
