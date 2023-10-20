@@ -8,7 +8,7 @@ export default function NotFound() {
         That&apos;s a 404 eh, bud?
         </h1>
         <p className="text-2xl font-bold text-slate-200 italic my-10">
-          The requested page wasn't found.
+          The requested page wasn&apos;t found.
         </p>
         <Link
           className="max-w-xs mx-auto rounded-lg p-4 bg-slate-800 ring-1 ring-slate-800/5 shadow-lg space-y-3 hover:bg-zinc-700 hover:ring-zinc-600 hover:text-zinc-300 text-slate-50 "
