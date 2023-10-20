@@ -20,8 +20,7 @@ export default async function Home() {
       <section className="mb-5 flex flex-col items-center">
         {years.map((year) => (
           <div className="mt-0 w-4/5 justify-center mx-auto" key={year._id}>
-            <Year year={year} openMusing={year.year == new Date().getFullYear()} />
-            {/* <hr className="h-px mt-8 bg-gray-200 border-0 dark:bg-gray-700" /> */}
+            <Year year={year} openMusing="true" />
             
             <div className="inline-flex items-center justify-center w-full">
               <hr className="w-2/3 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700" />
