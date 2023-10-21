@@ -23,7 +23,7 @@ export default function Year({ year, openMusing=true  }) {
 
       <Musing thought={year.notes} defaultOpen={openMusing}></Musing>
 
-      <div className="grid grid-cols-1 grid-rows-1 gap-10 md:grid-cols-1 2xl:grid-cols-2 items-stretch">
+      <div className="grid grid-cols-1 grid-rows-1 gap-2 md:grid-cols-1 2xl:grid-cols-2 items-stretch">
         {products.map((product) => (
           <div key={product._id}>
             <Product product={product} />

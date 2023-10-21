@@ -5,7 +5,7 @@ export default function Product({ product }) {
     return (
       
       <div className="p-6 bg-slate-200 block border border-gray-200 rounded-lg shadow h-full">
-        <a href="#">
+        <a href={"/vulns/"+product._id}>
           <h5 className="text-2xl font-bold tracking-tight text-gray-900">
             {product.productName}
           </h5>
@@ -40,12 +40,12 @@ export default function Product({ product }) {
   } else {
     return (
       <div className="p-6 bg-gray-400 block border border-gray-200 rounded-lg shadow h-full">
-        <a href="#">
+        
           <h5 className="text-2xl font-bold tracking-tight text-gray-900">
             Responsible disclosure in progress
           </h5>
           <span className="text-sm text-gray-900 dark:text-gray-900 italic">version: private</span>
-        </a>
+        
         <p className="my-3 font-normal text-gray-700" dangerouslySetInnerHTML={{__html: product.privateNotes}}></p>
       </div>
     );

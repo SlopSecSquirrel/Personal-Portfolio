@@ -7,7 +7,7 @@ module.exports.CVEProducts = [
     {
       id: this.kubevirtProductID,
       productName: "KubeVirt",
-      productVersion: "0.56",
+      productVersion: "v0.56",
       notes:
         "Through code review of the KubeVirt source code, I identified a potential path traversal flaw. Researchers at Google were able to weaponise my finding into a full high severity path traversal vulnerability, then led the charge with responsibly disclosing my finding to the KubeVirt team.",
       state: "public",

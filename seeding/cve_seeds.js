@@ -5,10 +5,10 @@ const CVEs = [
       cveId: "CVE-2022-1798",
       vulnName: "Arbitrary file read on host",
       vulnDescription:
-        "A path traversal vulnerability in the noted KubeVirt versions on all platforms allows a user able to configure the kubevirt to read arbitrary files on the host filesystem which are publicly readable or which are readable for UID 107 or GID 107.",
+        "A path traversal vulnerability in the noted KubeVirt versions on all platforms allows an attacker who can create VMI specs to craft a malicious VMI which is able to read arbitrary files on the host filesystem.",
       vulnSeverity: "High",
       vulnNotes:
-        "Credit to Roman Mohr and Diane Dubois of Google for helping with vulnerability weaponization and coordinating disclosure, credit to Jim Klopchic who was undertaking the KubeVirt assessment alongside myself",
+        "Credit to Roman Mohr and Diane Dubois at Google for helping with vulnerability weaponization and coordinating disclosure, credit to James Klopchic who was undertaking the KubeVirt assessment alongside myself",
       vulnState: "public",
       pubURLs:
         "https://github.com/kubevirt/kubevirt/security/advisories/GHSA-qv98-3369-g364|https://nvd.nist.gov/vuln/detail/CVE-2022-1798#ok",

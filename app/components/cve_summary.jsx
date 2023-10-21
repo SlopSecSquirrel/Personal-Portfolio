@@ -18,32 +18,32 @@ export default async function CVESummary() {
   return (
     <>
       {/* Mobile view */}
-      <div className="flex  md:hidden justify-between items-center m-1 font-medium py-1 px-2 w-screen rounded-lg text-white bg-slate-700">
-        <span className="flex text-xs py-1 px-2 font-medium leading-none max-w-full flex-initial">
+      <div className="flex   flex-wrap  md:hidden justify-center items-center m-1 font-medium py-1 px-2 w-full rounded-lg text-white bg-slate-700">
+        <span className="flex flex-overflow text-xs py-1 px-2 font-medium leading-none max-w-full flex-initial">
           CVEs: {cves.length}
         </span>
-        <span className="flex text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
+        <span className="flex  text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
           /
         </span>
-        <span className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
+        <span className="flex  text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
           Criticals: {criticalCount}
         </span>
-        <span className="flex text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
+        <span className="flex  text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
           /
         </span>
-        <span className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
+        <span className="flex  text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
           Highs: {highCount}
         </span>
-        <span className="flex text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
+        <span className="flex  text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
           /
         </span>
-        <span className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
+        <span className="flex  text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
           Mediums: {mediumCount}
         </span>
-        <span className="flex text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
+        <span className="flex  text-sm py-1 px-2 font-bold leading-none max-w-full flex-initial text-red-600">
           /
         </span>
-        <span className="flex text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
+        <span className="flex  text-xs  py-1 px-2 font-medium leading-none max-w-full flex-initial">
           Lows: {lowCount}
         </span>
       </div>
