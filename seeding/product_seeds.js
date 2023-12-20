@@ -1,7 +1,7 @@
 module.exports.kubevirtProductID = "6508e7c330030e1a044c573a"
 module.exports.faronicsProductID = "6508e7c330030e1a044c573b"
 module.exports.thirdProductID = "6508e7c330030e1a044c573c"
-module.exports.fourthProductID = "6508e7c330030e1a044c573d"
+module.exports.nagiosXIProductID = "6508e7c330030e1a044c573d"
 
 module.exports.CVEProducts = [
     {
@@ -41,7 +41,7 @@ module.exports.CVEProducts = [
       productName: "?????? 🤫",
       productVersion: "?????? 🤫",
       notes:
-        "?????? 🤫 is a large, mature, high-quality RMM tool which allows administrators to register agents which can be monitored and controlled remotely through a central server. I enjoyed working with the ?????? 🤫 team, they were open and professional throughout the disclosure process and I have a lot of respect for them as an organization.",
+        "?????? 🤫 is a large, mature, high-quality RMM tool which allows administrators to register agents which can be monitored and controlled remotely through a central server. I enjoyed working with the ?????? 🤫 team, they were open and professional throughout the disclosure process and I have a lot of respect for them as an organization. During the disclosure process the CEO of the company reached out directly, which I felt displayed excellent attention to detail and commitment to security.",
       state: "private",
       cves: [
         "6508e7c330030e1a044c6401",
@@ -66,14 +66,31 @@ module.exports.CVEProducts = [
         "Coming soon - the projected public disclosure date is 10/31/2023 (🎃)",
     },
     {
-      id: this.fourthProductID,
-      productName: "?????? 🤫",
-      productVersion: "?????? 🤫",
+      id: this.nagiosXIProductID,
+      productName: "Nagios XI",
+      productVersion: "5.11.1",
       notes:
-        "?????? 🤫 is a popular, market leading RMM tool which has become something of a household name amongst Systems Adminstrators over the last couple of decades. Their security posture is excellent at this point, their communication was professional and warm and their proactive approach to bugfixing is genuinely inspiring. I had an excellent time finding and reporting vulnerabilities in this product alongside my talented friend and colleague Colin Brum.",
-      state: "private",
-      cves: [],
+        "Nagios XI is a popular, market leading RMM tool which has become something of a household name amongst Systems Adminstrators over the last couple of decades. Their security posture is excellent at this point, their communication was professional and warm and their proactive approach to bugfixing is genuinely inspiring. I had an excellent time finding and reporting vulnerabilities in this product alongside my talented friend and colleague Colin Brum.",
+      state: "public",
+      cves: [
+      "6508e7c330030e1a044c7500",
+      "6508e7c330030e1a044c7501",
+      "6508e7c330030e1a044c7502",
+      "6508e7c330030e1a044c7503",
+      "6508e7c330030e1a044c7504",
+      "6508e7c330030e1a044c7505",
+      "6508e7c330030e1a044c7506",
+      "6508e7c330030e1a044c7507",
+      "6508e7c330030e1a044c7508",
+      "6508e7c330030e1a044c7509",
+      "6508e7c330030e1a044c750a",
+      "6508e7c330030e1a044c750b",
+      "6508e7c330030e1a044c750c",
+      "6508e7c330030e1a044c750d",
+      "6508e7c330030e1a044c750e",
+      "6508e7c330030e1a044c750f"
+    ],
       privateNotes:
-        "Coming soon - the projected public disclosure date is 11/30/2023, although this may change.",
+        "Coming soon - the projected public disclosure date is 12/06/2023, although this may change.",
     },
   ];

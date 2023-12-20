@@ -57,7 +57,7 @@ export default function MobilePopoverMenu({ years }) {
               </div>
               <div className="">
                 <a href="/resume" className="pl-5 flex items-center mb-0 md:mb-5 py-2 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-grey-900 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                  My resume
+                  My resumé
                 </a>
                 <hr></hr>
               </div>

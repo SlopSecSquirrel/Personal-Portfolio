@@ -86,7 +86,7 @@ export default function NarcissismDropdown({ years }) {
                   "block px-4 py-2 text-sm"
                 )}
               >
-                Resume
+                Resumé
               </a>
             )}
           </Menu.Item>

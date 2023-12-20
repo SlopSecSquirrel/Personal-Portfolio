@@ -1,4 +1,4 @@
-const { kubevirtProductID, faronicsProductID, thirdProductID, fourthProductID } = require("./product_seeds");
+const { kubevirtProductID, faronicsProductID, thirdProductID, fourthProductID, nagiosXIProductID } = require("./product_seeds");
 
 const CVEYears = [
     {
@@ -22,7 +22,7 @@ const CVEYears = [
         "Vulnerability research in 2023 was laser focused solely on <b>Remote Monitoring and Management (RMM)</b> tools. As a security researcher, RMM tools fascinate me; when they are compromised an attacker's scope grows exponentially from one compromised server to the potential compromise of every 'agent' which is managed by the RMM server.<br/><br/>I set myself a stretch goal in 2023 to register 1 CVE per month, and I'm proud to say that that goal was thoroughly obliterated, with 40+ CVEs being registered over the year.<br/><br/>I have a few interesting (in my biased opinion) observations from my research this year, and I'm planning on delivering a conference talk in 2024 which discusses the state of this product domain.",
       products: [
         faronicsProductID,
-        thirdProductID,
+        nagiosXIProductID,
         fourthProductID,
       ],
     },

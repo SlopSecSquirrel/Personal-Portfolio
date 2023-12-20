@@ -63,8 +63,8 @@ export default function CVEChip({ cve }) {
                   <span className="font-medium text-gray-400">
                       Details
                     </span>
-                    <p className="text-sm text-gray-50">
-                      {cve.vulnDescription}
+                    <p className="text-sm text-gray-50" dangerouslySetInnerHTML={{ __html: cve.vulnDescription }}>
+                      
                     </p>
                   </div>
                   {cve.vulnNotes ? <div className="mt-2">
@@ -77,7 +77,7 @@ export default function CVEChip({ cve }) {
                     </span>
                     <ul>
                       {cve.pubURLs.split("|").map((URL) => (
-                        <li className="mb-2" key={URL}>
+                        <li className="mb-2" key={URL+cve.cveId}>
                           <a  className="text-sm text-red-500 hover:text-white border-none" href={URL}>{URL}</a>
                         </li>
                       ))}

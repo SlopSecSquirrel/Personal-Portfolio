@@ -55,7 +55,7 @@ export default async function Page({ params }) {
       <section className="mb-5 flex flex-col items-center">
         <div className="mt-0 w-full md:w-4/5 justify-center mx-auto" key={product._id}>
           <h1 className="m-5 inline-block text-2xl sm:text-3xl font-semibold text-slate-900 tracking-tight dark:text-slate-200 text-center">
-            Vulnerabilities identified in {product.productName} {product.productVersion} ({count})
+            Vulnerabilities identified in {product.productName} {product.productVersion}  
           </h1>
           {/* debug stuff 👇 */}
           {/* <h1 className="text-white">{product._id}</h1>
@@ -67,7 +67,7 @@ export default async function Page({ params }) {
           {/* <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-5"> */}
           <div className="flex flex-wrap mt-5 p-5">
             {product.cves.map((cve) => (
-                <CVEChip key={cve.cveID} cve={cve}></CVEChip>
+                <CVEChip key={cve} cve={cve}></CVEChip>
               ))}
           </div>
 
